@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>你好</p>
+    <p>你好hah </p>
     <router-link to="/">Go to Foo</router-link>
     <router-view></router-view>
   </div>
@@ -10,6 +10,10 @@
 
 export default {
   name: 'app',
+  mounted () {
+    alert(this.router)
+    // console.log(1)
+  }
 }
 </script>
 

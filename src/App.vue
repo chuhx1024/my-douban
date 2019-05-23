@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <p>你好hah </p>
-    <router-link to="/">Go to Foo</router-link>
+    <router-link to="/pages/home">Go to Foo</router-link>
     <router-view></router-view>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="home-view">
     <h1>我就是home页面</h1>
   </div>
 </template>

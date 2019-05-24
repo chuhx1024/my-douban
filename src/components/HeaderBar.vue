@@ -1,7 +1,7 @@
 <template>
   <div class="header-bar">
     <h1 class="title">
-      <router-link :to="{name:Home}">豆瓣</router-link>
+      <router-link :to="{name:'Home'}">豆瓣</router-link>
     </h1>
     <ul class="nav">
       <li>
@@ -26,6 +26,11 @@ export default {
   name: 'HeaderBar',
   props: {
     msg: String
+  },
+  methods: {
+    showTalion () {
+      this.$emit('showTalion')
+    }
   }
 }
 </script>

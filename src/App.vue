@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <router-view name="search"></router-view>
   </div>
 </template>
 
@@ -15,6 +16,10 @@ export default {
 #app {
   max-width: 41.2rem;
   margin:0 auto;
+}
+
+.has-header {
+  margin-top: 4.8rem;
 }
 
 ul,li,a,h2{

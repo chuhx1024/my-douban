@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <p>你好hah </p>
-    <router-link to="/pages/home">Go to Foo</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -10,20 +8,39 @@
 
 export default {
   name: 'app',
-  mounted () {
-    alert(this.router)
-    // console.log(1)
-  }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  max-width: 41.2rem;
+  margin:0 auto;
+}
+
+ul,li,a,h2{
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
+  padding: 0 1.8rem;
+  background: #fff;
+  border-bottom: 0.1rem solid #f3f3f3;
 }
 </style>

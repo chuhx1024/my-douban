@@ -1,13 +1,15 @@
 <template>
   <div class="hello">
-    <h1>我就是pages页面</h1>
+    <header-bar/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HeaderBar from '@/components/HeaderBar'
 export default {
   name: 'Pages',
+  components: { HeaderBar },
 }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
   <div class="home-view has-header">
-    <list :items="items"></list>
+    <list :items="events"></list>
   </div>
 </template>
 
 <script>
-import fetchData from '@/config/fetch'
-import {mapState} from 'vuex'
+// import fetchData from '@/config/fetch'
+import {mapState, mapActions} from 'vuex'
 import List from '@/components/List'
 export default {
   name: 'Home',
@@ -22,15 +22,17 @@ export default {
   },
   computed: {
     ...mapState({
-      events: state => state.activeities.events
+      events: state => state.activities.events
     })
   },
+  methods: {
+    ...mapActions([
+      'getData','console'
+    ])
+  },
   mounted() {
-    fetchData('/event/list',{
-      loc: '108288',
-      start: 3,
-      count: 3
-    },'GET')
+    // this.$store.dispatch('getData')
+    this.getData()
   },
 }
 </script>

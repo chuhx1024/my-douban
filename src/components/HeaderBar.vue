@@ -27,6 +27,11 @@ export default {
   props: {
     msg: String
   },
+  data () {
+    return {
+      Home : ''
+    }
+  },
   methods: {
     showTalion () {
       this.$emit('showTalion')

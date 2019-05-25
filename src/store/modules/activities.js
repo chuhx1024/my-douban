@@ -1,6 +1,11 @@
-// import fetchData from '@/config/fetch'
+import fetchData from '@/config/fetch'
 const state = {
-  events: []
+  events: [
+    {id:123,name:"lihua"},
+    {id:1235,name:"lihua1"},
+    {id:1237,name:"lihua2"},
+    {id:1238,name:"lihua3"},
+  ]
 
 }
 
@@ -11,19 +16,24 @@ const mutations = {
 }
 
 const actions = {
-  // getData ({commit}) {
-  //   fetchData('event/list',{
-  //     loc: '108288',
-  //     start: 3,
-  //     count: 3
-  //   },'GET').then(res => {
-  //     commit({
-  //       type:'getEvents',
-  //       res: res
-  //     })
+  getData ({commit}) {
+    fetchData('/api/event/list',{
+      loc: '108288',
+      start: 3,
+      count: 3
+    },'GET').then(res => {
+      console.log(res)
+      commit({
+        type:'getEvents',
+        res: res.districts
+      })
       
-  //   })
-  // }
+    })
+  },
+  console () {
+    alert(1)
+  }
+  
 
 }
 

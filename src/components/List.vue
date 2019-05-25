@@ -16,7 +16,11 @@ export default {
       type:Array,
       required: true
     }
+  },
+  mounted () {
+    console.log(this.items, 123)
   }
+  
 }
 </script>
 

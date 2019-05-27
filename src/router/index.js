@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Pages from '../views/Pages'
 import Home from '../views/Home'
 import Search from '../views/Search'
+import Detail from '../views/Detail'
 
 Vue.use(Router)
 
@@ -27,7 +28,13 @@ export default new Router({
           path:'home',
           name:'Home',
           component: Home
+        },
+        {
+          path: 'detail/:id',
+          name: 'DetailView',
+          component: Detail
         }
+
       ]
     },
     {

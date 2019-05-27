@@ -254,7 +254,7 @@ const state = {
 
 const mutations = {
   loadMore (state, data) {
-    state.skip += 3
+    state.skip += 6
     state.events = state.events.concat(data.res)
   },
   getSingleEvent (state, data) {
@@ -268,11 +268,11 @@ const actions = {
     fetchData('/api/event/list',{
       loc: '108288',
       start: state.skip,
-      count: 3
+      count: 6
     },'GET').then(res => {
       commit({
         type:'loadMore',
-        res: res.districts
+        res: res.events
       })
       
     })

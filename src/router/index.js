@@ -8,25 +8,24 @@ import Detail from '../views/Detail'
 
 Vue.use(Router)
 
-
 export default new Router({
   mode: 'hash',
-  routes:[
+  routes: [
     {
-      path:'/',
-      redirect:'/pages'
+      path: '/',
+      redirect: '/pages'
     },
     {
       path: '/pages',
       component: Pages,
-      children:[
+      children: [
         {
-          path:'',
-          redirect:'/pages/home'
+          path: '',
+          redirect: '/pages/home'
         },
         {
-          path:'home',
-          name:'Home',
+          path: 'home',
+          name: 'Home',
           component: Home
         },
         {
@@ -39,11 +38,11 @@ export default new Router({
     },
     {
       path: '/search',
-      name:'search',
+      name: 'search',
       components: {
         default: Pages,
-        search: Search,
-      },
+        search: Search
+      }
     }
   ]
 })

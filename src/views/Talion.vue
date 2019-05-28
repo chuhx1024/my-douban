@@ -1,5 +1,5 @@
 <template>
-  <div class="talion">
+  <div class="talion-view">
     <div class="header-bar">
       <span @click="clonsTalion()">关闭</span>
       <form class="search" onsubmit="return false">
@@ -37,7 +37,9 @@ export default {
 </script>
 
 <style scoped>
-  h1 {
-    color:red;
+  .talion-view {
+    position: fixed;
+    top:0;
+    z-index: 100000;
   }
 </style>

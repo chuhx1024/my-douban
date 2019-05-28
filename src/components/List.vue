@@ -8,7 +8,7 @@
         <div class="content" >
           <img :src="item.image_hlarge" alt="cover">
           <h3>{{item.title}}</h3>
-          <p>{{item.content | subStr}}</p>
+          <p>{{item.content | cutStr(29)}}</p>
         </div>
         <div class="author">
           <span class="name">{{item.category_name}}</span>

@@ -19,11 +19,11 @@ export default {
   components: { HeaderBar, Talion },
   methods: {
     open () {
-      this.talion = 'open' 
+      this.talion = 'open'
     },
     close () {
-      this.talion = '' 
-    },
+      this.talion = ''
+    }
 
   }
 

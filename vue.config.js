@@ -7,14 +7,15 @@ module.exports = {
   devServer: {
     port: 8081,
     proxy: {
-        '/api': {
-            target: 'https://api.douban.com/v2/',
-            changeOrigin: true,
-            ws: true,
-            pathRewrite: {
-              '^/api': ''
-            }
+      '/api': {
+        target: 'https://api.douban.com/v2/',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          '^/api': ''
         }
+      }
     }
-  }
+  },
+  lintOnSave: false
 }

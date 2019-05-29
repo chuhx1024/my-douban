@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import InfiniteLoading from 'vue-infinite-loading';
-import {mapState, mapActions} from 'vuex'
+import InfiniteLoading from 'vue-infinite-loading'
+import { mapState, mapActions } from 'vuex'
 import List from '@/components/List'
 export default {
   name: 'Home',
-  components: { List, InfiniteLoading},
+  components: { List, InfiniteLoading },
   computed: {
     ...mapState({
       events: state => state.activities.events
@@ -21,17 +21,17 @@ export default {
     ...mapActions([
       'loadMore'
     ]),
-    onInfinite() {
+    onInfinite () {
       setTimeout(() => {
         this.loadMore()
-        this.$refs.infiniteLoading.$emit('$InfiniteLoading:loaded');
-      }, 1000);
+        this.$refs.infiniteLoading.$emit('$InfiniteLoading:loaded')
+      }, 1000)
     }
   },
-  mounted() {
+  mounted () {
     // this.$store.dispatch('getData')
-    // this.loadMore()
-  },
+    // this.loadMore ()
+  }
 }
 </script>
 

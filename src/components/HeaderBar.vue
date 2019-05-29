@@ -5,7 +5,7 @@
     </h1>
     <ul class="nav">
       <li>
-        <router-link :to="{name:Home}">电影</router-link>
+        <router-link :to="{name:'Move'}">电影</router-link>
       </li>
       <li>
         <router-link :to="{name:Home}">图书</router-link>
@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      Home : ''
+      Home: ''
     }
   },
   methods: {

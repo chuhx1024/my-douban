@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Pages from '../views/Pages'
 import Home from '../views/Home'
+import Move from '../views/Move'
 import Search from '../views/Search'
 import Detail from '../views/Detail'
 
@@ -27,6 +28,11 @@ export default new Router({
           path: 'home',
           name: 'Home',
           component: Home
+        },
+        {
+          path: 'move',
+          name: 'Move',
+          component: Move
         },
         {
           path: 'detail/:id',

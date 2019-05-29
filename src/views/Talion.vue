@@ -3,7 +3,7 @@
     <div class="header-bar">
       <span @click="clonsTalion()">关闭</span>
       <form class="search" onsubmit="return false">
-        <input 
+        <input
           type="search"
           name="query"
           v-model.trim.lazy = 'queryStr'
@@ -29,7 +29,7 @@ export default {
     goSearch () {
       this.$emit('closeTalion')
       this.$router.push({
-        path:'/search'
+        path: '/search'
       })
     }
   }

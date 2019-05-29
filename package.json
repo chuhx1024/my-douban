@@ -34,7 +34,10 @@
       "node": true
     },
     
-    "extends": "standard",
+    "extends": [
+      "plugin:vue/essential",
+      "standard"
+    ],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
